@@ -1,16 +1,16 @@
-## 📌 Architecture Overview
+## Architecture Overview
 
-The deployment follows this architecture:
+The deployment follows this architecture: 
 
 Mongo Express UI  
    ↓  
-Mongo Express External Service: Exposes Mongo Express outside the cluster
+Mongo Express External Service → (Exposes Mongo Express outside the cluster)  
    ↓  
-Mongo Express Pod: Runs Mongo Express 
+Mongo Express Pod → (Runs Mongo Express)  
    ↓  
-MongoDB Internal Service: Allows Mongo Express to communicate with MongoDB
+MongoDB Internal Service → (Allows Mongo Express to communicate with MongoDB)  
    ↓  
-MongoDB Pod: Runs the MongoDB database
+MongoDB Pod → (Runs the MongoDB database)
 
 ---
 
@@ -30,3 +30,6 @@ kubectl apply -f mongodb-configmap.yaml
 # Deploy Mongo Express
 kubectl apply -f mongo-express-deployment.yaml
 kubectl apply -f mongo-express-service.yaml
+
+If using Minikube, expose the service:
+minikube service mongo-express-service
