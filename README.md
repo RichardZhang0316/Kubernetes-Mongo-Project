@@ -35,4 +35,7 @@ kubectl apply -f mongo-express-service.yaml
 ---
 ## Run
 If using Minikube, expose the service:
+
+```bash
 minikube service mongo-express-service
+```
