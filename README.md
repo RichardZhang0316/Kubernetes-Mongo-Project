@@ -30,6 +30,9 @@ kubectl apply -f mongodb-configmap.yaml
 # Deploy Mongo Express
 kubectl apply -f mongo-express-deployment.yaml
 kubectl apply -f mongo-express-service.yaml
+```
 
+---
+## Run
 If using Minikube, expose the service:
 minikube service mongo-express-service
